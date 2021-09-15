@@ -33,8 +33,7 @@ services:
       - traefik-public
     deploy:
       placement:
-        contraints:
-            #Ele so vai poder rodar na manager
+        constraints:
           - node.role == manager
 volumes:
   traefik-certificates:
