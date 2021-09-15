@@ -8,7 +8,7 @@ services:
     deploy:
       labels:
         - "traefik.enable=true"
-        - "traefik.http.routers.testeth.rule=Host(testeth.maue.tech)"
+        - "traefik.http.routers.testeth.rule=Host(`testethterraform.maue.tech`)"
         - "traefik.http.routers.testeth.entrypoints=websecure"
         - "traefik.http.routers.testeth.tls.certresolver=letsencryptresolver"
         - "traefik.http.services.testeth.loadbalancer.server.port=80"
